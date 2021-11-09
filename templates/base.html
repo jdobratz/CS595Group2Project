@@ -37,12 +37,12 @@
         .main div {
         }
         .navigation {
-            /*
+
             width: 10%;
             float: left;
             height: 100%;
             padding-right: 15px;
-            */
+
             background-color: dodgerblue;
         }
         .content {
@@ -57,14 +57,6 @@
             font-size: 1.5em;
             text-decoration: none;
         }
-        .courselists {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        .courselists tr > * {
-            border: 1px solid black;
-            padding: 5px;
-        }
         .updateselfform input, .updateselfform textarea {
             width: 100%;
             resize: none;
@@ -75,6 +67,7 @@
 <body>
 <div class="menu">
     <div><button type="button" href="{% url 'logout' %}">Logout</button></div>
+    <div><h1>Welcome!</h1></div>
 </div>
 <div class="main">
     <div class="navigation">
@@ -84,8 +77,8 @@
     </div>
     <div class="content">
         <br>
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
         </br>
     </div>
 </div>
