@@ -1,5 +1,7 @@
+from __future__ import annotations
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from typing import Optional
 
 
 class User(models.Model):
@@ -13,10 +15,11 @@ class User(models.Model):
     name = models.CharField(max_length=50)
     unique_id = models.CharField(max_length=50)
     pwd = models.CharField(max_length=30)
+    pwd_tmp = models.BooleanField(default=True, blank=False)
     user_type = models.IntegerField(
         choices=UserType.choices,
         default=UserType.Patient
-    )
+            )
     insurance_information = models.CharField(max_length=1000)
 
 

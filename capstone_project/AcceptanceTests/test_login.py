@@ -12,21 +12,20 @@ class TestLoginView(TestCase):
 
         self.long_user_username = 'cmwojta'
         long_user = User.objects.create(
-            type= User.Supervisor,
+            type=User.UserType.Supervisor,
             username=self.long_user_username,
-            password=self.check_pass,
-            l_name='wojta',
-            f_name='chris',
-            password_tmp=False
+            pwd=self.check_pass,
+            name='chris wojta',
+            pwd_tmp=False
         )
 
         self.long_user = long_user.id
 
         self.short_user_username = 'chriswojta'
         self.short_user = User.objects.create(
-            type=User.Staff,
+            type=User.UserType.Staff,
             username=self.short_user_username,
-            password=self.check_pass,
+            pwd=self.check_pass,
         )
 
     def test_rejects_empty_username(self):

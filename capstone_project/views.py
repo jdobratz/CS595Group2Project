@@ -72,6 +72,7 @@ class HomePatient(View):
     def post(self,request):
         pass
 
+
 class AddUser(View):
     def get(self, request):
         return render(request, "add_user.html")

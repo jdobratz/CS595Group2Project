@@ -1,5 +1,5 @@
 import uuid
-from capstone_project.LoginUtil import LoginUtil
+from capstone_project.ClassDesign.LoginUtil import LoginUtil
 from django.test import TestCase, Client
 from django.shortcuts import reverse
 from capstone_project.models import User
