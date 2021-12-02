@@ -12,7 +12,7 @@ class TestLoginView(TestCase):
 
         self.long_user_username = 'cmwojta'
         long_user = User.objects.create(
-            type= User.Supervisor,
+            type=User.Supervisor,
             username=self.long_user_username,
             password=self.check_pass,
             l_name='wojta',
